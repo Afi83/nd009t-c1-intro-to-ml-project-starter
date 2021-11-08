@@ -34,13 +34,13 @@
 
 TODO: Replace the image below with your own.
 
-![model_train_score.png](/model_train_score.png)
+![model_train_score.png](model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
 TODO: Replace the image below with your own.
 
-![model_test_score.png](/model_test_score.png)
+![model_test_score.png](model_test_score.png)
 
 ## Summary
 #### The goal of this project was to predict bike sharing demand from sets of fields, including datetime, temparature, humidity, and other important fields. From EDA it was noticed that datetime is an important feature so it was splitted into separated columns for more granuality of the datetime in the dataset. This had a great impact on the prediction of the demand. Running different models through hyperparamter tunning seemed XGBoost and GBM showed a promissing performance compared to other models. However, it should be noted that if more than 10 minutes was to run the models Neural network potentially could have outperformed these models. From model hyperparamters learning_rate, num_leaves and boosting_type of GBM group of models was used for hyperparamter tunning because they usually have great impact on the model performance. Here the lower learning rate, even though made the learning slower but increased the performance. Overall, what in all AutoGlueon models outperformaed all the models were the WeightedEnsamble models that shows the importance of bagging and ensamble models in the prediction accuracy. These models might not always be fast when making production decisions but they usually proves to have the highest perofrmance. Individual group of models also were tunned and observed that from all it seems GBM and XGB have the highest performance when being ensambled and when good features are available for the model to be trained on. In conclusion
