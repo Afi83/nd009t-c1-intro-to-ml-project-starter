@@ -24,11 +24,11 @@
 #### I would have spent more time in Feature Engineering and giving more time to the AutoGluon AutoML to run for best models based on the added features. I would have also tried some of the default HPO settings that are available in AutoGluon to optimize furthermore. I would't have spend anytime to do mannual hyperparamters checking. 
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
+|model|time|num_stack_level|num_bag_folds|score|
 |--|--|--|--|--|
-|initial|?|?|?|?|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+|initial|600|3|10|1.39450|
+|add_features|600|3|10|0.47412|
+|hpo|600|2|10|0.5594|
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
@@ -43,4 +43,4 @@ TODO: Replace the image below with your own.
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-#### The goal of this project was to predict bike sharing demand from sets of fields, including datetime, temparature, humidity, and other important fields. From EDA it was noticed that datetime is an important feature so it was splitted into separated columns for more granuality of the datetime of the data. This had a great impact on the prediction of the demand. Running different models through hyperparamter tunning seemed XGBoost and GBM showed a promissing performance compared to other models. However, it should be noted that if more than 10 minutes was to run the models Neural network potentially could have outperformed these models. 
+#### The goal of this project was to predict bike sharing demand from sets of fields, including datetime, temparature, humidity, and other important fields. From EDA it was noticed that datetime is an important feature so it was splitted into separated columns for more granuality of the datetime in the dataset. This had a great impact on the prediction of the demand. Running different models through hyperparamter tunning seemed XGBoost and GBM showed a promissing performance compared to other models. However, it should be noted that if more than 10 minutes was to run the models Neural network potentially could have outperformed these models. From model hyperparamters learning_rate, num_leaves and boosting_type of GBM group of models was used for hyperparamter tunning because they usually have great impact on the model performance. Here the lower learning rate, even though made the learning slower but increased the performance. Overall, what in all AutoGlueon models outperformaed all the models were the WeightedEnsamble models that shows the importance of bagging and ensamble models in the prediction accuracy. These models might not always be fast when making production decisions but they usually proves to have the highest perofrmance. Individual group of models also were tunned and observed that from all it seems GBM and XGB have the highest performance when being ensambled and when good features are available for the model to be trained on. In conclusion
